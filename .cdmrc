@@ -1,14 +1,11 @@
-# Define lab view
+# Show terminal + editor view
 playground-view: terminal-editor
 
-# Open these files by default
-tabs:
-  - README.md
-  - main.py#1:1
+# Default tabs to open (inline syntax)
+tabs: ['README.md', 'main.py#1:1', 'test_lab.py#1:1']
 
-# Add a run button
-run-button: python3 $$file
+# Run button command — executes main.py automatically
+run-button: python3 main.py
 
-# Optional welcome message
-terminals:
-  - echo "Welcome to Python Lab!"
+# Optional terminal startup messages
+terminals: ['echo "🚀 Welcome to your Python Lab!"', 'echo "Click Run Code to execute main.py automatically."']
